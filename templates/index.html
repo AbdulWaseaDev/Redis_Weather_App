@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌤 Weather App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🌤 Weather App</h1>
+
+    <!-- Search Form -->
+    <div>
+      <input type="text" id="city" placeholder="Enter city name">
+      <button class="primary" onclick="getWeather()">Get Weather</button>
+    </div>
+
+    <!-- Weather Result Card -->
+    <div id="weatherResult" class="weather-card hidden"></div>
+
+    <!-- Cache Stats -->
+    <h2>📊 Cache Stats</h2>
+    <div>
+      <button class="primary" onclick="showStats()">Show Stats</button>
+      <button class="danger" onclick="flushCache()">Flush Cache</button>
+    </div>
+    <div id="stats" class="stats-box hidden"></div>
+  </div>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

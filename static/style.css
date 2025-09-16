@@ -1,0 +1,163 @@
+/* ===================== General Styling ===================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* ===================== Main Container ===================== */
+.container {
+    margin: 50px auto;
+    padding: 30px 25px;
+    width: 90%;
+    max-width: 500px;
+    background: #ffffffee;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ===================== Title ===================== */
+h1 {
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* ===================== Input Field ===================== */
+input {
+    padding: 12px 15px;
+    width: 70%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 8px rgba(0, 119, 204, 0.3);
+}
+
+/* ===================== Buttons ===================== */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button.primary {
+    background: #0077cc;
+    color: white;
+}
+
+button.primary:hover {
+    background: #005fa3;
+    transform: scale(1.05);
+}
+
+button.danger {
+    background: #e63946;
+    color: white;
+}
+
+button.danger:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* ===================== Weather Card ===================== */
+.weather-card {
+    margin-top: 25px;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.4s ease-in-out;
+    text-align: left;
+}
+
+.weather-card h2 {
+    margin-top: 0;
+    color: #0077cc;
+}
+
+.weather-card img {
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.weather-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.weather-row img {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+
+/* ===================== Cache Stats Box ===================== */
+.stats-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.stats-box p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.stats-box strong {
+    color: #0077cc;
+}
+
+/* ===================== Animations ===================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================== Responsive Design ===================== */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    input {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+    .weather-card img {
+        width: 60px;
+        height: 60px;
+        margin-left: 0;
+    }
+}
