@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+build/
+__pycache__/
+*.pyc
+instance/
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables file
+.env
+# Database files
+*.db
+*.sqlite3
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+*.rej
+*.egg-info/
+dist/
+build/
+.eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
