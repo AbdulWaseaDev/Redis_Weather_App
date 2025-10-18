@@ -134,7 +134,7 @@ def redis_info():
 
 @app.route("/favicon.ico")
 def favicon():
-    return "", 204
+    return "No icon available", 204
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

@@ -1,35 +1,3 @@
-// async function getWeather() {
-//   const city = document.getElementById("city").value;
-//   console.log("Fetching weather for city:", city);
-//   if (!city) {
-//     alert("Please enter a city name.");
-//     return;
-//   }
-
-//   try {
-//     const response = await fetch(`/weather/${city}`);
-//     const result = await response.json();
-//     if (!result) {
-//       document.getElementById("weatherResult").innerHTML = "<p>⚠ No data received.</p>";
-//       return;
-//     }
-// const w = result.data;
-// document.getElementById("weatherResult").innerHTML = `
-//     <h2>Weather in ${w.city}, ${w.country}</h2>
-//     🕒 Local Time: ${w.local_time}<br>
-//     🌡 Temperature: ${w.temperature_c}°C (Feels like ${w.feels_like_c}°C)<br>
-//     ☁ Condition: ${w.condition} <img src="https:${w.icon}" alt="${w.condition}"><br>
-//     💨 Wind: ${w.wind_kph} km/h (${w.wind_dir})<br>
-//     💧 Humidity: ${w.humidity}%<br>
-//     🔆 UV Index: ${w.uv_index}<br>
-//     ⏱ Last Updated: ${w.last_updated}
-// `;
-//         showStats();
-//   } catch (error) {
-//     console.error("Error fetching weather:", error);
-//     document.getElementById("weatherResult").innerHTML = "<p>⚠ Failed to fetch weather data.</p>";
-//   }
-// }
 async function getWeather() {
     const city = document.getElementById("city").value.trim();
     if (!city) {
@@ -106,5 +74,16 @@ async function flushCache() {
   } catch (error) {
     console.error("Error flushing cache:", error);
     alert("⚠ Failed to flush cache.");
+  }
+}
+
+async function ping_redis() {
+  try {
+    const response = await fetch(`/ping-redis`);
+    const data = await response.json();
+    alert(`Redis Status: ${data.redis_status}, Success: ${data.success}`);
+  } catch (error) {
+    console.error("Error pinging Redis:", error);
+    alert("⚠ Failed to ping Redis.");
   }
 }
